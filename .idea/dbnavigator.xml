@@ -17,19 +17,22 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a2e90714-226a-42dd-8a19-c612f2cd7f92">
-      <console name="PostgreSQL" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM person]]></console>
+      <console name="PostgreSQL" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM people]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="a2e90714-226a-42dd-8a19-c612f2cd7f92" object-ref="consoles/PostgreSQL" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="a2e90714-226a-42dd-8a19-c612f2cd7f92" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a2e90714-226a-42dd-8a19-c612f2cd7f92" dataset="public.books" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="a2e90714-226a-42dd-8a19-c612f2cd7f92" dataset="public.people" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="a2e90714-226a-42dd-8a19-c612f2cd7f92" dataset="public.person" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -37,6 +40,9 @@
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
