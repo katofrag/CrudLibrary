@@ -17,7 +17,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a2e90714-226a-42dd-8a19-c612f2cd7f92">
-      <console name="PostgreSQL" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM people]]></console>
+      <console name="PostgreSQL" type="STANDARD" schema="public" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

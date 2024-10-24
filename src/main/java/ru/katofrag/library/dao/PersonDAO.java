@@ -3,9 +3,11 @@ package ru.katofrag.library.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import ru.katofrag.library.models.Book;
 import ru.katofrag.library.models.Person;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class PersonDAO {
@@ -24,6 +26,10 @@ public class PersonDAO {
         return jdbcTemplate.query("SELECT * FROM People WHERE people_id=?",
                 new PersonMapper(), id).stream().findAny().orElse(null);
     }
+    // Для валидации уникальности ФИО
+    public Optional <Person> show(String name) {
+        return jdbcTemplate.query("SELECT * FROM People WHERE name=?", new PersonMapper(), name).stream().findAny();
+    }
 
     public void save(Person savePeople) {
         jdbcTemplate.update("INSERT INTO People(name, age) VALUES(?, ?)", savePeople.getName(),
@@ -37,5 +43,11 @@ public class PersonDAO {
 
     public void delete(int id) {
         jdbcTemplate.update("DELETE FROM People WHERE people_id=?", id);
+    }
+
+    // Здесь Join не нужен. И так уже получили человека с помощью отдельного метода
+    public List<Book> getBooksByPersonId(int id) {
+        return jdbcTemplate.query("SELECT * FROM Books WHERE people_id = ?",
+                new BookMapper(), id);
     }
 }

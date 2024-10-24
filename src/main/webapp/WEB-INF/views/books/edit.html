@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form th:method="POST" th:action="@{/books}" th:object="${book}">
+<form th:method="PATCH" th:action="@{/books/{id}(id=${book.getId()})}" th:object="${book}">
     <label for="bookName">Введите название книги: </label>
     <input type="text" th:field="*{bookName}" id="bookName"/>
     <div style="color:red" th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}">Введите корректное название книги</div>
